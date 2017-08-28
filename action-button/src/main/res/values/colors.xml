@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ab_white">#ffffff</color>
+
+    <color name="ab_orange_block_normal">#FF8200</color>
+    <color name="ab_orange_block_press">#E07400</color>
+    <color name="ab_orange_block_disable">#50FF8200</color>
+
+    <color name="ab_grey_block_normal">#c4c4c4</color>
+    <color name="ab_grey_block_press">#a9a8a8</color>
+    <color name="ab_grey_block_disable">#d4d3d3</color>
+</resources>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    tools:context="gudong.name.demo.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="微博"
+        android:textColor="@color/ab_orange_block_normal"
+        android:layout_marginBottom="6dp"/>
+
+    <gudong.name.button.ActionButton
+        android:id="@+id/btn_follow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"/>
+
+    <gudong.name.button.ActionButton
+        android:id="@+id/btn_follow_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Hello World!"/>
+
+    <gudong.name.button.ActionButton
+        android:id="@+id/btn_follow_icon_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="line"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="头条"
+        android:textColor="@color/toutiao_red"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="6dp"/>
+
+    <gudong.name.button.ActionButton
+        android:id="@+id/btn_follow_toutiao"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="line"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="知乎"
+        android:textColor="@color/zhihu_blue_normal"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="6dp"/>
+
+    <gudong.name.button.ActionButton
+        android:id="@+id/btn_follow_zhihu"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="line"/>
+
+</LinearLayout>

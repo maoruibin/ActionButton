@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="toutiao_red">#E6665F</color>
+    <color name="zhihu_blue_normal">#3A88E5</color>
+    <color name="zhihu_blue_press">#3374c2</color>
+    <color name="zhihu_blue_disable">#25548c</color>
+    <color name="zhihu_text_normal_color">#9A9A9A</color>
+</resources>
