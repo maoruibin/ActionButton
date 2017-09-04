@@ -1,5 +1,5 @@
 ## ActionButton
-use TextView as a ActionButton with left icon
+Use TextView as a ActionButton with left icon
  
 ## Shot
 ![demo](http://wx2.sinaimg.cn/mw690/6fb50cedly1fizp39avfeg20b10ixtdr.gif)
