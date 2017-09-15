@@ -35,8 +35,6 @@ setLeftIcon | set left icon
 setLoadingDrawable |  set loading style by a drawable, as default use [FlowerLoading](https://github.com/maoruibin/FlowerLoading)
 setOnActionClick | set click listener 
 
-
- 
 ## Author
 
 - blog&nbsp;&nbsp;&nbsp;&nbsp;[http://gudong.name](http://gudong.name)
