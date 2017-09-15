@@ -1,4 +1,4 @@
-## ActionButton [ ![Download](https://api.bintray.com/packages/gudong/maven/loading/images/download.svg) ](https://bintray.com/gudong/maven/action-button/_latestVersion)   ![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)  [ ![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
+## ActionButton [ ![Download](https://api.bintray.com/packages/gudong/maven/action-button/images/download.svg) ](https://bintray.com/gudong/maven/action-button/_latestVersion)   ![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)  [ ![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 Use TextView as a ActionButton with left icon
  
 ## Shot
@@ -44,4 +44,20 @@ setOnActionClick | set click listener
 - github [https://github.com/maoruibin](https://github.com/maoruibin)
 
 - weibo&nbsp;&nbsp;[http://weibo.com/maoruibin](http://weibo.com/maoruibin)
+ 
+## License
+
+    Copyright 2017 GuDong
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
  
