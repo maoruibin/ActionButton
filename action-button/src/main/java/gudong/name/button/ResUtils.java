@@ -4,8 +4,7 @@ import android.content.Context;
 import android.graphics.drawable.Drawable;
 
 /**
- * author  : ruibin1 (ruibin1@staff.weibo.com)
- * version : 5.0.0
+ * author  : gudong
  * create  : 2017/8/26 - 下午10:47.
  */
 

@@ -46,7 +46,7 @@
 
     <gudong.name.button.ActionButton
         android:id="@+id/btn_follow_toutiao"
-        android:layout_width="100dp"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:text="line"/>
 

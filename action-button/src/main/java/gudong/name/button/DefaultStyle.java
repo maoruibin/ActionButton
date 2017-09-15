@@ -6,9 +6,8 @@ import android.graphics.drawable.Drawable;
 import android.view.Gravity;
 
 /**
- * author  : ruibin1 (ruibin1@staff.weibo.com)
- * version : 5.0.0
- * create  : 2017/8/26 - 下午10:51.
+ * author  : gudong
+ * create  : 2017/8/26 - 下午10:47.
  */
 
 public class DefaultStyle {

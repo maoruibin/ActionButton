@@ -7,12 +7,10 @@ import android.graphics.Rect;
 import android.graphics.drawable.Animatable;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
-import android.os.SystemClock;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 import name.gudong.loading.LoadingDrawable;
@@ -22,8 +20,7 @@ import name.gudong.loading.LoadingDrawable;
  * 要解决的问题：
  * 1、padding
  * 2、commentDrawable 按下状态
- * author  : ruibin1 (ruibin1@staff.weibo.com)
- * version : 7.8.0
+ * author  : gudong
  * create  : 2017/8/4 - 上午12:01.
  */
 public class ActionButton extends TextView {
@@ -46,7 +43,6 @@ public class ActionButton extends TextView {
     private String mLastText;
     //上次显示的 left icon
     private Drawable mLastLeftDrawable;
-
 
 
     public ActionButton(Context context) {
@@ -91,7 +87,7 @@ public class ActionButton extends TextView {
     }
 
 
-    public void setOnActionClick(final OnActionClick listener){
+    public void setOnActionClick(final OnActionClick listener) {
         setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -108,7 +104,7 @@ public class ActionButton extends TextView {
         this.mEnableLoading = flag;
     }
 
-    private class ActionTask extends AsyncTask<Void,Void,Boolean>{
+    private class ActionTask extends AsyncTask<Void, Void, Boolean> {
         private OnActionClick mListener;
 
         public ActionTask(OnActionClick listener) {
@@ -118,10 +114,10 @@ public class ActionButton extends TextView {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            if(mEnableLoading){
+            if (mEnableLoading) {
                 showLoading();
             }
-            if(mListener != null){
+            if (mListener != null) {
                 mListener.onStart();
             }
         }
@@ -129,31 +125,33 @@ public class ActionButton extends TextView {
         @Override
         protected void onPostExecute(Boolean aBoolean) {
             super.onPostExecute(aBoolean);
-            if(mEnableLoading){
+            if (mEnableLoading) {
                 hideLoading();
             }
-            if(mListener != null){
+            if (mListener != null) {
                 mListener.onEnd(aBoolean);
             }
         }
 
         @Override
         protected Boolean doInBackground(Void... params) {
-            if(mListener != null){
+            if (mListener != null) {
                 mListener.onAction();
             }
             return true;
         }
     }
 
-    public interface OnActionClick{
+    public interface OnActionClick {
         void onStart();
 
         /**
          * execute Action
+         *
          * @return true if action success else return false
          */
         boolean onAction();
+
         void onEnd(Boolean result);
     }
 
@@ -163,10 +161,8 @@ public class ActionButton extends TextView {
         resizeTextSize();
     }
 
-
-
     // resize text content width and height
-    private void resizeTextSize(){
+    private void resizeTextSize() {
         Rect bounds = new Rect();
         Paint textPaint = getPaint();
         textPaint.getTextBounds(getText().toString(), 0, getText().length(), bounds);
@@ -183,7 +179,7 @@ public class ActionButton extends TextView {
 
 
     public void showLoading(final Drawable drawable) {
-        if(drawable == null){
+        if (drawable == null) {
             return;
         }
         if (!(drawable instanceof Animatable)) {
@@ -222,36 +218,12 @@ public class ActionButton extends TextView {
         clearCompoundDrawable();
     }
 
-    private void clearCompoundDrawable(){
+    private void clearCompoundDrawable() {
         setCompoundDrawables(null, null, null, null);
     }
 
-    private void clearText(){
+    private void clearText() {
         setText("");
-    }
-
-    public void setLeftIcon(int icon) {
-        setLeftIcon(icon, 0);
-    }
-    public void setLeftIcon(Drawable icon) {
-        if(icon == null){
-            clearCompoundDrawable();
-        }else{
-            setLeftIcon(icon, 0);
-        }
-    }
-
-    public void setLeftIcon(int icon, int drawablePadding) {
-        Drawable iconDrawable = getResources().getDrawable(icon);
-        setLeftIcon(iconDrawable,drawablePadding);
-    }
-    public void setLeftIcon(Drawable iconDrawable, int drawablePadding) {
-        setLeftIcon(iconDrawable, drawablePadding, IconSize.wrap(iconDrawable));
-    }
-
-    public void setLeftIcon(final int icon, final int drawablePadding, final IconSize iconSize) {
-        Drawable drawable = getResources().getDrawable(icon);
-        setLeftIcon(drawable, drawablePadding, iconSize);
     }
 
     public void setLeftIcon(
@@ -265,8 +237,7 @@ public class ActionButton extends TextView {
                 int iconWidth = iconSize.mWidth;
                 int iconHeight = iconSize.mHeight;
                 //icon left size
-                int leftDistance = (getWidth() - mTextContentWidth - iconWidth) / 2 -
-                        drawablePadding;
+                int leftDistance = (getWidth() - mTextContentWidth - iconWidth) / 2 - drawablePadding;
                 drawable.setBounds(
                         leftDistance,
                         0,
@@ -278,13 +249,37 @@ public class ActionButton extends TextView {
         });
     }
 
+    public void setLeftIcon(int icon) {
+        setLeftIcon(icon, 0);
+    }
 
+    public void setLeftIcon(Drawable icon) {
+        if (icon == null) {
+            clearCompoundDrawable();
+        } else {
+            setLeftIcon(icon, 0);
+        }
+    }
+
+    public void setLeftIcon(int icon, int drawablePadding) {
+        Drawable iconDrawable = getResources().getDrawable(icon);
+        setLeftIcon(iconDrawable, drawablePadding);
+    }
+
+    public void setLeftIcon(Drawable iconDrawable, int drawablePadding) {
+        setLeftIcon(iconDrawable, drawablePadding, IconSize.wrap(iconDrawable));
+    }
+
+    public void setLeftIcon(final int icon, final int drawablePadding, final IconSize iconSize) {
+        Drawable drawable = getResources().getDrawable(icon);
+        setLeftIcon(drawable, drawablePadding, iconSize);
+    }
 
     private void startLoadingAnim() {
         if (mLoadingDrawable == null) {
             return;
         }
-        if(mLoadingDrawable instanceof Animatable){
+        if (mLoadingDrawable instanceof Animatable) {
             Animatable loadingDrawable = (Animatable) mLoadingDrawable;
             loadingDrawable.start();
         }
@@ -294,7 +289,7 @@ public class ActionButton extends TextView {
         if (mLoadingDrawable == null) {
             return;
         }
-        if(mLoadingDrawable instanceof Animatable){
+        if (mLoadingDrawable instanceof Animatable) {
             Animatable loadingDrawable = (Animatable) mLoadingDrawable;
             loadingDrawable.stop();
         }

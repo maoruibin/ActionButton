@@ -24,8 +24,6 @@ public class MainActivity extends AppCompatActivity {
 
     ActionButton mActionButtonToutiao;
     ActionButton mActionButtonZhihu;
-    
-    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,8 +45,6 @@ public class MainActivity extends AppCompatActivity {
 
         setUpButtonToutiao(mActionButtonToutiao);
         setUpButtonZhihu(mActionButtonZhihu);
-
-
 
     }
 
@@ -119,8 +115,8 @@ public class MainActivity extends AppCompatActivity {
         final Drawable drawableNormal = DrawableUtils.generateBtnBackgroundFill(this, R.color.toutiao_red, Utils.dip2px(this,6));
         button.setBackground(drawableNormal);
         final LoadingDrawable lightDrawable = new LoadingDrawable(this, R.drawable.loading_progress_grey);
-        lightDrawable.setRotateStep(10);
-        lightDrawable.setDuration(30);
+        lightDrawable.setDivideCount(60);
+        lightDrawable.setDuration(300);
         button.setLoadingDrawable(lightDrawable);
         button.setOnActionClick(new ActionButton.OnActionClick() {
             private boolean isFollow = false;
@@ -131,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public boolean onAction() {
-                SystemClock.sleep(default_duration_time);
+                SystemClock.sleep(1000);
                 return true;
             }
 
