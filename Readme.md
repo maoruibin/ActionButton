@@ -2,7 +2,7 @@
 Use TextView as a ActionButton with left icon
  
 ## Shot
-![demo](http://7xr9gx.com1.z0.glb.clouddn.com/action_button_real.gif)
+![demo](http://7xr9gx.com1.z0.glb.clouddn.com/action_button_real_9.gif)
  
 ## Usage
 
